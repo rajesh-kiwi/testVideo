@@ -20,8 +20,8 @@ app.get('/', function(req, res){
 });
 
 //process.env.port = 4000;
-var port = process.env.port;
+//var port = process.env.port;
 
-app.listen(port, function(){
-    console.log('Server listening at ' + port)
+app.listen(process.env.PORT || 5000, function(){
+    console.log('Server listening at ' + process.env.PORT || 5000)
 });
