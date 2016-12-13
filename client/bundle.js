@@ -9007,7 +9007,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.default = _react2.default.createElement(
 		_reactRouter.Route,
-		{ component: Main, path: '/' },
+		{ component: Main, path: '/view' },
 		_react2.default.createElement(_reactRouter.IndexRoute, { component: ProductApp })
 	);
 

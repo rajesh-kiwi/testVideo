@@ -5,7 +5,7 @@ var Main = require('../components/Main.jsx').Main;
 var ProductApp = require('../components/ProductApp.jsx');
 
 export default (  
-	<Route component={ Main } path={'/'} >
+	<Route component={ Main } path={'/view'} >
 		<IndexRoute component={ProductApp} />
 	</Route>
 );

@@ -13,7 +13,11 @@ app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'client')));
 
-app.use('/', require("./routes/viewRoute.js"));
+app.use('/view', require("./routes/viewRoute.js"));
+
+app.get('/', function(req, res){
+	res.redirect("/view");
+});
 
 process.env.port = 4000;
 var port = process.env.port;
