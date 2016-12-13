@@ -19,7 +19,7 @@ app.get('/', function(req, res){
 	res.redirect("/view");
 });
 
-process.env.port = 4000;
+//process.env.port = 4000;
 var port = process.env.port;
 
 app.listen(port, function(){
