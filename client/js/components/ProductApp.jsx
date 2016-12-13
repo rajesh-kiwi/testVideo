@@ -39,8 +39,9 @@ var Product = React.createClass({
         var that = this;
         var html = this.state.videoList.map(function(video, index){
             return(
-                <div key={index}>
-                    <span onClick={that.setIframeUrl.bind(null, video.url)}> {video.url} </span><br />
+                <div key={index} style={{ "border" : "1px solid black", padding: "5px", width:"30%"}}>
+                    <span style={{"margin": "0px 20px 0px 5px"}}>{video.name}</span>
+                    <a href="#" style={{color: "blue"}} onClick={that.setIframeUrl.bind(null, video.url)}>{video.url}</a><br />
                 </div>
             )
         });

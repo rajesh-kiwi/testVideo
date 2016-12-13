@@ -9093,13 +9093,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var html = this.state.videoList.map(function (video, index) {
 	            return React.createElement(
 	                "div",
-	                { key: index },
+	                { key: index, style: { "border": "1px solid black", padding: "5px", width: "30%" } },
 	                React.createElement(
 	                    "span",
-	                    { onClick: that.setIframeUrl.bind(null, video.url) },
-	                    " ",
-	                    video.url,
-	                    " "
+	                    { style: { "margin": "0px 20px 0px 5px" } },
+	                    video.name
+	                ),
+	                React.createElement(
+	                    "a",
+	                    { href: "#", style: { color: "blue" }, onClick: that.setIframeUrl.bind(null, video.url) },
+	                    video.url
 	                ),
 	                React.createElement("br", null)
 	            );
@@ -10059,7 +10062,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var getVideoList = function getVideoList(callback) {
 	    // ajax req.
 
-	    var videoList = [{ url: "https://www.youtube.com/embed/XGSy3_Czz8k" }, { url: "https://www.youtube.com/watch?v=vLPgScAbBMk" }];
+	    var videoList = [{ url: "https://www.youtube.com/embed/XGSy3_Czz8k", name: "Song" }, { url: "https://www.youtube.com/watch?v=vLPgScAbBMk", name: "Cricket match" }];
 
 	    callback(videoList);
 	};
